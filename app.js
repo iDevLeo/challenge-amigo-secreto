@@ -12,9 +12,24 @@ function agregarAmigo() {
         //Añadimos el nombre capturado a la lista amigos
         amigos.push(nombreAmigo);
 
-        //Mostrar lista de amigos
+        //Mostrar amigos
         mostrarAmigos();
 
         console.log(amigos);
+    }
+}
+
+//Mostrar lista de amigos
+function mostrarAmigos() {
+    let listaAmigos = document.getElementById('listaAmigos');
+
+    listaAmigos.innerHTML = '';
+
+//Añadimos el listado    
+    for (let i = 0; i < amigos.length; i++) {
+        let lista = document.createElement('li');
+        lista.textContent = amigos[i];
+        listaAmigos.appendChild(lista);
+        document.getElementById('amigo').value = "";
     }
 }
