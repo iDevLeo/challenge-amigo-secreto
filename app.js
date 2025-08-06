@@ -47,5 +47,7 @@ function sortearAmigo() {
         // Elimina el amigo sorteado del arreglo
         amigos.splice(indice, 1);
         resultado.innerHTML = `<p>${nombre}</p>`;
+    } else {
+        alert('Ingresa datos para realizar un sorteo');
     }
 }
