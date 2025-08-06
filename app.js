@@ -33,3 +33,19 @@ function mostrarAmigos() {
         document.getElementById('amigo').value = "";
     }
 }
+
+//Sorteto de amigos
+function sortearAmigo() {
+    let totalAmigos = amigos.length;
+    let resultado = document.getElementById('resultado');
+
+    if (totalAmigos > 0) {
+        // Índice para sortear amigo
+        let indice = Math.floor(Math.random() * totalAmigos);
+        let nombre = amigos[indice];
+
+        // Elimina el amigo sorteado del arreglo
+        amigos.splice(indice, 1);
+        resultado.innerHTML = `<p>${nombre}</p>`;
+    }
+}
